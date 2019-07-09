@@ -149,3 +149,51 @@ console.log(daysInMonth(7, 2019));
 console.log(daysInMonth(8, 2019)); 
 
 
+						//arraySortWhile
+
+function sort(arr) {
+	var i = 0;
+	var j;
+	while(i<arr.length){
+			j=i+1;
+			while(j<arr.length){
+				if (arr[i]>arr[j]) {
+					var m = arr[i];
+					arr[i]=arr[j];
+					arr[j]=m 
+				}
+			j++;
+			}
+			i++;	
+	}
+	console.log(arr)
+}
+sort([1,3,6,3,4,10,5]);
+
+						//forSort
+
+var arr = [1,5,1,7,3,2];
+for (var i = 0; i < arr.length; i++) {
+	for (var j = i+1; j < arr.length; j++) {
+		if (arr[i]>arr[j]) {
+			var p = arr[i];
+			arr[i]=arr[j];
+			arr[j]=p 
+		}
+	}}
+		console.log(arr);
+
+						//maxArray
+
+function max(x) {
+	var max = x[0];
+	for (var i = 0; i < x.length; i++) {
+		if (x[i]>max) {
+			max=x[i];
+		}
+	}
+	console.log(max)
+}
+max([1,5,2,18,59,100,128]);
+
+						//

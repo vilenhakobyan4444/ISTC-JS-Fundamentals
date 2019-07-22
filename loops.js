@@ -57,3 +57,13 @@ numbers.map(fu);
 function myFunction(value,index) {
 	console.log(value * 2);
 }
+
+						    //forin
+
+function check(xy) {
+for(var x in obj)
+	if (obj[x]==xy) {
+		console.log(true);
+	}
+}
+check("c");

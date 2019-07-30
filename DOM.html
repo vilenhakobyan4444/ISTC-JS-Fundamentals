@@ -8,12 +8,8 @@
 </head>
 <body>
     <div id="div"></div>
-    
-
 </body>
-
 <script>
-
     var arr = ["h1","h2","h3","h4","h5"];
     var div = document.getElementById("div");
     var r;
@@ -21,23 +17,20 @@
     var b;
     function fu(){
         var node;
-        for(var i = 0; i < arr.length; i++){
-            node = document.createElement(arr[i]);
-            div.appendChild(node);
-            node.innerHTML = "Text";
-            node.setAttribute("onclick","olor(this)");
-            node.style.cursor = "pointer";
-        }
+            for(var i = 0; i < arr.length; i++){
+                node = document.createElement(arr[i]);
+                div.appendChild(node);
+                node.innerHTML = "Text";
+                node.setAttribute("onclick","olor(this)");
+                node.style.cursor = "pointer";
+            }
     }
     function olor(x){
          r = Math.round(Math.random()*256);
          g = Math.round(Math.random()*256);
          b = Math.round(Math.random()*256);
          x.style.color = 'rgb(' + r + ', ' + g + ', ' + b + ')';
-         
         }
     fu();
 </script>
-
-
 </html>

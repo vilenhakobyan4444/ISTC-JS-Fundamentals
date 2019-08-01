@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="div"></div>
+    <div  id="div"></div>
+    <button style="position:absolute; top:10px;left:70px;" onclick="fu()">Click me</button>
 </body>
 <script>
     var arr = ["h1","h2","h3","h4","h5"];
@@ -15,22 +16,31 @@
     var r;
     var g;
     var b;
+    var left;
+    var toop;
     function fu(){
         var node;
-            for(var i = 0; i < arr.length; i++){
-                node = document.createElement(arr[i]);
-                div.appendChild(node);
-                node.innerHTML = "Text";
-                node.setAttribute("onclick","color(this)");
-                node.style.cursor = "pointer";
-            }
+        for(var i = 0; i < arr.length; i++){
+            node = document.createElement(arr[i]);
+            div.appendChild(node);
+            node.innerHTML = "Text";
+            node.setAttribute("onclick","color(this)");
+            node.style.cursor = "pointer";
+        }
     }
     function color(x){
          r = Math.round(Math.random()*256);
          g = Math.round(Math.random()*256);
          b = Math.round(Math.random()*256);
          x.style.color = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+         left = Math.round(Math.random()*1200);
+         toop = Math.round(Math.random()*800);
+         var fontSize = Math.round(Math.random()*200);
+         x.style.position = "absolute";
+         x.style.left = left +"px";
+         x.style.top = toop +"px";
+         x.style.fontSize = fontSize+"px";
+         x.style.transition = "0.5s";
         }
-    fu();
 </script>
 </html>

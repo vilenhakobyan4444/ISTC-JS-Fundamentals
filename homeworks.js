@@ -254,3 +254,20 @@ function fu(str){
     }
 }
 fu("wwwaaagsdfsdss");
+
+						//toUpperCase
+
+function func(str){
+    var newStr = "";
+    for(var i = 0; i < str.length; i++){
+        if(i === 0){
+            newStr = str[i].toUpperCase();
+        } else if(str[i] === " "){
+            j = newStr.length;
+            newStr += (str.slice(j,i) + " " + str[i+1].toUpperCase());
+        }
+    }
+    console.log(newStr + "ion");
+     
+}
+func("the king is lion")

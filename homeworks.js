@@ -239,3 +239,18 @@ function max(x) {
 max([1,5,2,18,59,100,128]);
 
 						
+						//count of reapet string
+
+
+function fu(str){
+    var score = 1;
+    for(var i = 0; i< str.length; i++){
+        if(str[i] === str[i+1]){
+            score++;
+        } else{
+            console.log(score + str[i]);
+            score = 1;
+        }
+    }
+}
+fu("wwwaaagsdfsdss");
